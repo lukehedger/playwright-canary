@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev --port 5678",
     "build": "next build && next export",
+    "build:canary": "sh scripts/build-canary.sh",
     "start": "next start",
-    "test": "node tests/home.spec.js"
+    "test": "node -e 'require(\"./canary/home.test.js\").handler()'"
   },
   "dependencies": {
     "next": "9.5.4",
