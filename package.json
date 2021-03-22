@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "build:canary": "sh scripts/build-canary.sh",
     "start": "next start",
-    "test": "node -e 'require(\"./canary/home.test.js\").handler()'"
+    "test": "node -e 'require(\"./canary/home.js\").handler()'"
   },
   "dependencies": {
     "next": "9.5.4",
