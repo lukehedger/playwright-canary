@@ -6,26 +6,28 @@
 npm install
 ```
 
-## Develop
+## Run local tests
+
+First run local development server:
 
 ```sh
 npm run dev
 ```
 
-## Build
+Then run Playwright tests:
+
+```sh
+BASE_URL=http://localhost:5678 SCREENSHOT_DIR=canary/screenshots npm run test
+```
+
+## Build app
 
 ```sh
 npm run build
 ```
 
-## Start
+## Build canary
 
 ```sh
-npm run start
-```
-
-## Start
-
-```sh
-BASE_URL=http://localhost:5678 SCREENSHOT_DIR=canary/screenshots npm run test
+npm run build:canary
 ```
