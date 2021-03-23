@@ -3,18 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "next dev --port 5678",
-    "build": "next build && next export",
-    "build:canary": "sh scripts/build-canary.sh",
-    "start": "next start",
-    "test": "node -e 'require(\"./canary/home.js\").handler()'"
-  },
-  "dependencies": {
-    "next": "9.5.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "build": "sh scripts/build-canary.sh",
+    "test": "node -e 'require(\"./canary/donate.js\").handler()'"
   },
   "devDependencies": {
-    "playwright-webkit": "1.9.2"
+    "playwright-chromium": "1.9.2"
   }
 }

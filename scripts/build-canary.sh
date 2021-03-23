@@ -6,11 +6,11 @@ set -e
 # Create Lambda Layer directory
 mkdir -p canary/nodejs/node_modules/
 
-# Install Playwright and webkit browser binary to node_modules/playwright
-PLAYWRIGHT_BROWSERS_PATH=0 npm install playwright-webkit --prefix canary/nodejs
+# Install Playwright Chromium without browser binary
+PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install playwright-chromium --prefix canary/nodejs
 
-# Copy canary handler and spec to Lambda Layer directory
-cp canary/home.js canary/nodejs/node_modules/
+# Copy canary handler to Lambda Layer directory
+cp canary/donate.js canary/nodejs/node_modules/
 
 # Zip canary handler and dependencies
 cd canary && zip -r nodejs nodejs
